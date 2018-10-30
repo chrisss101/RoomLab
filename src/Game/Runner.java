@@ -3,6 +3,7 @@ package Game;
 import People.Person;
 import Rooms.Room;
 import Rooms.WinningRoom;
+import Rooms.OnionRoom;
 
 import java.util.Scanner;
 
@@ -28,6 +29,10 @@ public class Runner {
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
 		building[x][y] = new WinningRoom(x, y);
+
+        int m = (int)(Math.random()*building.length);
+        int n = (int)(Math.random()*building.length);
+        building[m][n] = new OnionRoom(m, n);
 		 
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
